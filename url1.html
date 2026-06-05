@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">🔗 URL Shortener</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+
+    <h1>Shorten Your Long URLs</h1>
+    <p>Fast, Simple and Secure URL Shortening Service</p>
+
+    <div class="card">
+
+        <div class="input-box">
+            <input
+                type="text"
+                id="urlInput"
+                placeholder="Enter your long URL here..."
+            >
+
+            <button onclick="shortenURL()">
+                Shorten URL
+            </button>
+        </div>
+
+        <div id="result"></div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 URL Shortener. All rights reserved.
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
